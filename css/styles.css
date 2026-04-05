@@ -456,6 +456,41 @@ a {
   line-height: 1.6;
 }
 
+/* === TESTIMONIALS === */
+.testimonial-section {
+  text-align: center;
+  padding: 100px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.testimonial-quote-mark {
+  font-size: 120px;
+  color: rgba(249, 112, 102, 0.15);
+  line-height: 1;
+  margin-bottom: -40px;
+}
+
+.testimonial-text {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #e2e8f0;
+  max-width: 700px;
+  margin: 0 auto 24px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: var(--coral);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.testimonial-role {
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
 /* === SCROLL ANIMATION BASE === */
 .animate-on-scroll {
   opacity: 0;
@@ -604,5 +639,17 @@ a {
 
   .achievement-cards {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-section {
+    padding: 60px 20px;
+  }
+
+  .testimonial-quote-mark {
+    font-size: 80px;
+  }
+
+  .testimonial-text {
+    font-size: 18px;
   }
 }
