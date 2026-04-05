@@ -325,6 +325,77 @@ a {
   color: var(--gray-400);
 }
 
+/* === SECTION DARK BACKGROUND === */
+.section-dark {
+  background: var(--navy);
+}
+
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--coral), var(--navy));
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 48px;
+  padding-left: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background: var(--coral);
+  border-radius: 50%;
+  border: 3px solid var(--navy);
+}
+
+.timeline-year {
+  color: var(--coral);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+.timeline-role {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timeline-company {
+  color: var(--gray-400);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.timeline-desc {
+  color: var(--gray-500);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 /* === SCROLL ANIMATION BASE === */
 .animate-on-scroll {
   opacity: 0;
@@ -438,5 +509,23 @@ a {
   .pillars {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 24px;
+  }
+
+  .timeline-item::before {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-role {
+    font-size: 18px;
   }
 }
