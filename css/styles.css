@@ -396,6 +396,66 @@ a {
   line-height: 1.6;
 }
 
+/* === METRICS === */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.metric {
+  text-align: center;
+}
+
+.metric-number {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--coral);
+  line-height: 1;
+  display: inline;
+}
+
+.metric-suffix {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--coral);
+  display: inline;
+}
+
+.metric-label {
+  color: var(--gray-400);
+  font-size: 14px;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.achievement {
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--coral);
+  border-radius: 0 8px 8px 0;
+  padding: 24px;
+}
+
+.achievement h4 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.achievement p {
+  color: var(--gray-300);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 /* === SCROLL ANIMATION BASE === */
 .animate-on-scroll {
   opacity: 0;
@@ -527,5 +587,22 @@ a {
 
   .timeline-role {
     font-size: 18px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .metric-number {
+    font-size: 40px;
+  }
+
+  .metric-suffix {
+    font-size: 28px;
+  }
+
+  .achievement-cards {
+    grid-template-columns: 1fr;
   }
 }
