@@ -90,3 +90,43 @@ if (contactForm) {
     submitBtn.disabled = false;
   });
 }
+
+// === SCROLL ANIMATIONS (Intersection Observer) ===
+const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+const scrollObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      scrollObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
+animatedElements.forEach(el => scrollObserver.observe(el));
+
+// === HERO PARALLAX ===
+const heroPhoto = document.querySelector('.hero-photo');
+
+if (heroPhoto) {
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const heroHeight = document.querySelector('.hero').offsetHeight;
+    if (scrollY < heroHeight) {
+      heroPhoto.style.transform = `translateY(${scrollY * 0.15}px)`;
+    }
+  }, { passive: true });
+}
+
+// === STAGGERED ANIMATIONS ===
+const staggerGroups = ['.pillars .pillar', '.metrics-grid .metric', '.achievement-cards .achievement', '.leadership-grid .leadership-card'];
+
+staggerGroups.forEach(selector => {
+  const items = document.querySelectorAll(selector);
+  items.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.1}s`;
+  });
+});
