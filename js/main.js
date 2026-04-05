@@ -54,3 +54,39 @@ if (metricsGrid) {
   }, { threshold: 0.3 });
   metricsObserver.observe(metricsGrid);
 }
+
+// === CONTACT FORM HANDLING ===
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button');
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        formStatus.textContent = 'Message sent! I\'ll be in touch soon.';
+        formStatus.className = 'form-status success';
+        contactForm.reset();
+      } else {
+        formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+        formStatus.className = 'form-status error';
+      }
+    } catch {
+      formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+      formStatus.className = 'form-status error';
+    }
+
+    submitBtn.textContent = 'Send Message';
+    submitBtn.disabled = false;
+  });
+}

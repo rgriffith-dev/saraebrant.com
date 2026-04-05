@@ -548,6 +548,109 @@ a {
   line-height: 1.5;
 }
 
+/* === CONTACT === */
+.contact-section {
+  background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+  padding: 100px 40px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.contact-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-family: var(--font-sans);
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  outline: none;
+  transition: background 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  background: var(--navy-light);
+}
+
+.form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: var(--navy);
+}
+
+.form-status.error {
+  color: #fff3cd;
+}
+
+.social-links {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--white);
+}
+
 /* === SCROLL ANIMATION BASE === */
 .animate-on-scroll {
   opacity: 0;
@@ -712,5 +815,13 @@ a {
 
   .leadership-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-section h2 {
+    font-size: 28px;
   }
 }
