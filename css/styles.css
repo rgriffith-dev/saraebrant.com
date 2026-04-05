@@ -330,6 +330,67 @@ a {
   background: var(--navy);
 }
 
+/* === BACKGROUND IMAGE SECTIONS === */
+.bg-image-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bg-image-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.bg-image-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Timeline: healthcare/hospital */
+.bg-timeline {
+  background-image: url('../images/timeline-bg.jpg');
+}
+.bg-timeline::after {
+  background: rgba(15, 23, 42, 0.88);
+}
+
+/* Achievements: team/leadership */
+.bg-achievements {
+  background-image: url('../images/achievements-bg.jpg');
+}
+.bg-achievements::after {
+  background: rgba(10, 10, 10, 0.85);
+}
+
+/* Testimonials: Sara's photo */
+.bg-testimonials {
+  background-image: url('../images/hero-headshot.jpg');
+}
+.bg-testimonials::after {
+  background: rgba(15, 23, 42, 0.92);
+}
+
+/* Leadership: team meeting */
+.bg-leadership {
+  background-image: url('../images/leadership-bg.jpg');
+}
+.bg-leadership::after {
+  background: rgba(10, 10, 10, 0.85);
+}
+
+/* Contact: Sara's approachable photo */
+.bg-contact {
+  background-image: url('../images/about-photo.jpg');
+}
+.bg-contact::after {
+  background: rgba(249, 112, 102, 0.85);
+}
+
 /* === TIMELINE === */
 .timeline {
   position: relative;
