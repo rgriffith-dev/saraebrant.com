@@ -609,6 +609,191 @@ a {
   line-height: 1.5;
 }
 
+/* === SIGNATURE INITIATIVES === */
+.initiative {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(249, 112, 102, 0.15);
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 40px;
+}
+
+.initiative:last-child {
+  margin-bottom: 0;
+}
+
+.initiative-eyebrow {
+  color: var(--coral);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.initiative-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.initiative-tagline {
+  color: var(--gray-400);
+  font-size: 17px;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.initiative-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.initiative-gallery img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(249, 112, 102, 0.2);
+}
+
+.initiative-body p {
+  color: var(--gray-300);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.initiative-body strong {
+  color: var(--coral);
+}
+
+.framework-callout {
+  background: linear-gradient(135deg, rgba(249, 112, 102, 0.12), rgba(249, 112, 102, 0.04));
+  border: 1px solid rgba(249, 112, 102, 0.3);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 28px 0;
+  text-align: center;
+}
+
+.framework-label {
+  color: var(--coral);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.framework-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.framework-name span {
+  color: var(--coral);
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.framework-callout p {
+  color: var(--gray-400);
+  font-size: 14px;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.impact-item {
+  background: rgba(249, 112, 102, 0.06);
+  border-left: 3px solid var(--coral);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+}
+
+.impact-item h5 {
+  color: var(--coral);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.impact-item p {
+  color: var(--gray-300);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.wvp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.wvp-column {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.wvp-column h5 {
+  color: var(--coral);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(249, 112, 102, 0.2);
+}
+
+.wvp-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wvp-column li {
+  color: var(--gray-300);
+  font-size: 14px;
+  line-height: 1.6;
+  padding-left: 18px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.wvp-column li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+.wvp-column li:last-child {
+  margin-bottom: 0;
+}
+
 /* === CONTACT === */
 .contact-section {
   background: linear-gradient(135deg, var(--coral), var(--coral-dark));
@@ -885,6 +1070,38 @@ a {
   }
 
   .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative {
+    padding: 28px 20px;
+  }
+
+  .initiative-title {
+    font-size: 24px;
+  }
+
+  .initiative-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-gallery img {
+    height: 240px;
+  }
+
+  .framework-name {
+    font-size: 18px;
+  }
+
+  .framework-name span {
+    font-size: 22px;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wvp-grid {
     grid-template-columns: 1fr;
   }
 
